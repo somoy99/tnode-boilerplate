@@ -1,0 +1,41 @@
+{
+  "name": "trails-express-es6",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "Md. Tahmid Shahriar Khan (Somoy)",
+  "scripts": {
+    "build": "webpack --config=webpack.config.js",
+    "start": "npm run build && node ./dist/index.js",
+    "start:dev": "nodemon --exec babel-node src/index.js"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.8.7",
+    "bcrypt": "^4.0.1",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.4.0",
+    "helmet": "^3.21.3",
+    "jsonwebtoken": "^8.5.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.9.4",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/node": "^7.8.7",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.7",
+    "babel-loader": "^8.0.6",
+    "babel-minify-webpack-plugin": "^0.3.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "nodemon": "^2.0.2",
+    "terser-webpack-plugin": "^2.3.5",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
