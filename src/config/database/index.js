@@ -1,15 +1,11 @@
-import mongoose from 'mongoose';
-import { databaseConfig } from '../index';
+import mongoose from 'mongoose'
 
 export const dbConnect = () => {
-    mongoose.connect(
-        databaseConfig.url,
-        {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-            useFindAndModify: false,
-            useCreateIndex: true
-        }
-    );
-    return mongoose.connection;
+  mongoose.connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+    useCreateIndex: true
+  })
+  return mongoose.connection
 }

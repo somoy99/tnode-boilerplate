@@ -1,14 +1,25 @@
 {
-  "name": "trails-express-es6",
+  "name": "somoy99/tnode-boilerplate",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "author": "Md. Tahmid Shahriar Khan (Somoy)",
+  "author": "k.somoykhan@gmail.com (somoy khan)",
+  "homepage": "somoykhan.netlify.app",
   "scripts": {
     "build": "webpack --config=webpack.config.js",
     "start": "npm run build && node ./dist/index.js",
-    "start:dev": "nodemon --exec babel-node src/index.js"
+    "dev": "nodemon --exec babel-node src/index.js"
   },
+  "keywords": [
+    "nodejs",
+    "boilerplate",
+    "mongodb",
+    "mongoose",
+    "express",
+    "es6",
+    "babel",
+    "webpack"
+  ],
   "dependencies": {
     "@babel/runtime": "^7.8.7",
     "bcrypt": "^4.0.1",

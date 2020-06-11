@@ -1,15 +1,15 @@
-const path = require('path');
-const MinifyPlugin = require('babel-minify-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
-const nodeExternals = require('webpack-node-externals');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const path = require('path')
+const MinifyPlugin = require('babel-minify-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
+const nodeExternals = require('webpack-node-externals')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 module.exports = {
-  mode: "production",
+  mode: 'production',
   entry: './src/index.js',
   target: 'node',
   output: {
     filename: 'index.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist')
   },
   module: {
     rules: [
@@ -25,17 +25,14 @@ module.exports = {
       }
     ]
   },
-  plugins: [
-    new CleanWebpackPlugin(),
-    new MinifyPlugin()
-  ],
+  plugins: [new CleanWebpackPlugin(), new MinifyPlugin()],
   optimization: {
     minimize: true,
     minimizer: [
       new TerserPlugin({
-        test: /\.js(\?.*)?$/i,
-      }),
-    ],
+        test: /\.js(\?.*)?$/i
+      })
+    ]
   },
   externals: [nodeExternals()]
-};
+}
