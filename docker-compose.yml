@@ -1,0 +1,12 @@
+version: '3'
+services:
+  app:
+    env_file: .env
+    volumes:
+      - .:./
+      - ./node_modules
+version: '3.1'
+services:
+  mongo:
+    image: mongo
+    command: --serviceExecutor adaptive
